@@ -21,7 +21,7 @@ def manual_zero_pad(
         array: np.ndarray,
         pad_width: int,
         pad_height: int
-)-> int:
+)-> np.ndarray:
 
     padded_array = np.zeros(
         (array.shape[0] + 2 * pad_height,
@@ -53,6 +53,7 @@ def apply_convolution(
         pad_height=pad_height
         )
     print(50 * "-", "\nManual zero padded image:\n", zero_padded_image)
+    print(50 * "-", "\nManual zero padded image Shape:\n", zero_padded_image.shape)
 
     new_image_array = np.zeros_like(image, dtype=np.float32)
 
